@@ -20,14 +20,14 @@ const HomePage = () => {
         </Col>
         <Col sm={12} md={6} lg={4} className="mb-2">
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="https://via.placeholder.com/286x180" />
+                <Card.Img variant="top" src="https://pbs.twimg.com/media/D03RjULXgAcr7R-.jpg" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
+                    <Card.Title>Imagenes policromaticas de la tierra</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                      </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    <Button variant="primary" onClick={()=> history.push('/epic')}>Ver</Button>
                 </Card.Body>
             </Card>
         </Col>

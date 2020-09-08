@@ -12,5 +12,17 @@ class NASAClient {
             console.log(e)
         }
     }
+
+    getEarthPolychromaticImaging(date) {
+        const url = (date.trim() !== "") ? `https://api.nasa.gov/EPIC/api/natural/date/${date}?api_key=o4zE7xs1zFU20T7ITAyRVOYexcw5cTbnIdb5C3FB` : `https://api.nasa.gov/EPIC/api/natural?api_key=o4zE7xs1zFU20T7ITAyRVOYexcw5cTbnIdb5C3FB`
+        try {
+            return fetch(url)
+                .then(res => res.json())
+                .then(result => (result))
+        } catch (e) {
+            console.log(e)
+        }
+    }
+
 }
 export default NASAClient

@@ -12,14 +12,6 @@ const APODPage = () => {
         NASAClientApi.getAstrononyPictureOfTheDay(date).then(response => setData(response))
     }, [date]);
 
-
-    /*  handleDateNew=()=>{
-         const date = document.getElementById("dateNew").value;
-         setDateNew(document.getElementById("dateNew").value);
-         console.log(dateNew);
-     } */
-
-    //<img className="responsive" style={{ width: "100%" }} src={data.hdurl} alt="" />
     return (
         <>
             <Row>
@@ -40,7 +32,7 @@ const APODPage = () => {
                                             className="mb-2"
                                             id="dateNew"
                                             min="1995-06-16"
-                                            value={new Date().toISOString().slice(0, 10)}
+                                            defaultvalue={new Date().toISOString().slice(0, 10)}
                                             max={new Date().toISOString().slice(0, 10)}
                                             placeholder="Date"
                                             onChange={() => {
