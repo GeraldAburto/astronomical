@@ -1,20 +1,19 @@
 import React from 'react';
 import { Row, Card, Col, Button } from 'react-bootstrap';
-import { useHistory } from "react-router-dom";
+
+import GoToButton from '../../Components/GoToButton'
 
 const HomePage = () => {
-    const history = useHistory();
-    
     return <Row>
         <Col sm={12} md={6} lg={4} className="mb-2">
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://cdn.pixabay.com/photo/2017/04/22/00/14/universe-2250310__340.jpg" />
                 <Card.Body>
-                    <Card.Title>Imagen Astronómica del día</Card.Title>
+                    <Card.Title>Astronomy Picture of the Day</Card.Title>
                     <Card.Text>
-                    Cada día se presenta una imagen o fotografía diferente de nuestro fascinante universo, junto con una breve explicación escrita por un astrónomo profesional.
+                        Each day a different image or photograph of our fascinating universe is presented, along with a brief explanation written by a professional astronomer.
                      </Card.Text>
-                    <Button variant="primary" onClick={()=> history.push('/apod')}>Ver foto</Button>
+                    <GoToButton url="/apod" text="View photo" />
                 </Card.Body>
             </Card>
         </Col>
@@ -22,12 +21,11 @@ const HomePage = () => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="https://pbs.twimg.com/media/D03RjULXgAcr7R-.jpg" />
                 <Card.Body>
-                    <Card.Title>Imagenes policromaticas de la tierra</Card.Title>
+                    <Card.Title>Earth Polychromatic Imaging Camera</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        provides information on the daily imagery collected by DSCOVR's Earth Polychromatic Imaging Camera (EPIC) instrument.
                      </Card.Text>
-                    <Button variant="primary" onClick={()=> history.push('/epic')}>Ver</Button>
+                    <GoToButton url="/epic" text="See" />
                 </Card.Body>
             </Card>
         </Col>
